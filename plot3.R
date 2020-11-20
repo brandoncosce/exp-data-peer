@@ -15,7 +15,7 @@ sn <- NEIsub %>% summarise(total_emissions = sum(Emissions))
 dir.create("plots")
 png("./plots/plot3.png")
 g<- ggplot(data = sn, aes(year,total_emissions))
-g + geom_point() + facet_grid(. ~ type) + geom_smooth(method = "lm")
+g + geom_point() + facet_grid(. ~ type) + geom_smooth(method = "lm") + xlab ("Year") + ylab ("Baltimore City Total Emissions (Tons)") + ggtitle("plot3")
 dev.off()
 
                                 

@@ -11,5 +11,5 @@ sn <- NEI %>% summarise(total_emmissions = sum(Emissions))
 
 dir.create("plots")
 png("./plots/plot1.png")
-plot(sn$year,sn$total_emmissions)
+plot(sn$year,sn$total_emmissions, main = "plot1", xlab = "Year", ylab = "Total Emissions (Tons)")
 dev.off()
